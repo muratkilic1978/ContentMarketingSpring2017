@@ -1,0 +1,12 @@
+/*
+Theme Name: Home Made WP Theme
+Author: Murat Kilic
+Author URI: http://localhost/underscoreswordpress
+Description: This is a Home Made WordPress Theme from scratch
+Version: 0.1
+*/
+
+img#logoimg {
+  height: auto !important;
+  width: 60% !important;
+}

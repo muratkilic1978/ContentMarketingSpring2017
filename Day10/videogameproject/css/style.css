@@ -1,0 +1,57 @@
+   .fixed {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      height: 30px;
+      width: 100%;
+      background-color: #F6F6F6;
+      text-align: center;
+      
+}
+     
+#asideplatform {
+     background-image: url("http://localhost/videogamedb/img/platforms-400.png");
+     background-repeat: no-repeat;
+    background-position: center;
+      height: 300px;
+     margin-top: -30px;
+}
+
+#asidepublisher {
+     background-image: url("http://localhost/videogamedb/img/publishers-400.png");
+     background-repeat: no-repeat;
+    background-position: center;
+      height: 280px;
+    margin-top: -30px;
+}
+
+#asidevideogame {
+     background-image: url("http://localhost/videogamedb/img/videogamecollection-260.png");
+     background-repeat: no-repeat;
+    background-position: center;
+      height: 110px;
+    margin-top: 5px;
+}
+
+
+
+#showcontent>tbody>tr:last-child {
+    
+    
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  width: 27%;
+}
+
+.pager {
+  margin: 4px 0;
+  padding-left: 0;
+  text-align: center;
+  list-style: none;
+}

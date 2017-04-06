@@ -1,0 +1,51 @@
+SELECT prisfilter.prisinterval, smykkekategori.smykketype, produkt.beskrivelse, produkt.produktnavn, produkt.tidsalder
+FROM prisfilter 
+INNER JOIN produkt
+ON prisfilter.id = produkt.pid
+INNER JOIN smykkekategori
+ON produkt.sid = smykkekategori.id
+WHERE smykketype LIKE 'vedhæng';
+
+SELECT prisfilter.prisinterval, smykkekategori.smykketype, produkt.beskrivelse, produkt.produktnavn, produkt.tidsalder
+FROM prisfilter 
+INNER JOIN produkt
+ON prisfilter.id = produkt.pid
+INNER JOIN smykkekategori
+ON produkt.sid = smykkekategori.id
+WHERE prisinterval LIKE '300-600';
+
+SELECT prisfilter.prisinterval, smykkekategori.smykketype, produkt.beskrivelse, produkt.produktnavn, produkt.tidsalder
+FROM prisfilter 
+INNER JOIN produkt
+ON prisfilter.id = produkt.pid
+INNER JOIN smykkekategori
+ON produkt.sid = smykkekategori.id
+WHERE beskrivelse LIKE '%guld%'
+
+SELECT prisfilter.prisinterval, smykkekategori.smykketype, produkt.beskrivelse, produkt.produktnavn, produkt.tidsalder FROM prisfilter INNER JOIN produkt ON prisfilter.id = produkt.pid INNER JOIN smykkekategori ON produkt.sid = smykkekategori.id WHERE beskrivelse LIKE '%guld%' or produktnavn LIKE '%ring%'
+
+SELECT prisfilter.prisinterval, smykkekategori.smykketype, produkt.beskrivelse, produkt.produktnavn, produkt.tidsalder FROM prisfilter INNER JOIN produkt ON prisfilter.id = produkt.pid INNER JOIN smykkekategori ON produkt.sid = smykkekategori.id WHERE beskrivelse LIKE '%guld%' or produktnavn LIKE '%ring%'
+AND prisinterval LIKE '%ring%'
+
+
+SELECT * 
+FROM smykkekategori 
+INNER JOIN produkt ON smykkekategori.id = produkt.sid 
+INNER JOIN prisfilter ON produkt.pid = prisfilter.id 
+WHERE smykkekategori.id IN (1, 2, 3, 4, 5) AND prisfilter.prisinterval LIKE '300-600'
+
+
+SELECT * 
+FROM smykkekategori 
+INNER JOIN produkt ON smykkekategori.id = produkt.sid 
+INNER JOIN prisfilter ON produkt.pid = prisfilter.id 
+WHERE smykkekategori.id IN (1, 2, 3, 4, 5) AND prisfilter.prisinterval LIKE '300-600' AND produkt.tidsalder LIKE '400-1050ekr'
+
+
+SELECT * 
+FROM smykkekategori 
+INNER JOIN produkt ON smykkekategori.id = produkt.sid 
+INNER JOIN prisfilter ON produkt.pid = prisfilter.id 
+WHERE smykkekategori.id IN (1, 2, 3, 4, 5) AND prisfilter.prisinterval LIKE '$prisinterval' AND produkt.tidsalder LIKE '$tidsalder'
+
+SELECT produkt.produktnavn AS pproduktnavn, produkt.tidsalder AS ptidsalder, produkt.beskrivelse AS pbeskrivelse FROM produkt INNER JOIN smykkekategori ON produkt.sid = smykkekategori.id INNER JOIN prisfilter ON produkt.pid = prisfilter.id WHERE smykkekategori.id IN ( 1 , 2 , 3 , 4 , 5 ) AND prisfilter.prisinterval LIKE ' 300-600 ' AND produkt.tidsalder LIKE ' 400-1050ekr '

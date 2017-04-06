@@ -7,7 +7,6 @@ $siteDescription = '';
 include('includes/header.php');
 ?>
 
-
 <?php
 // Establishing connection to database
 include('includes/connectdb.php');
@@ -26,7 +25,6 @@ $query = "INSERT INTO videogames (id, title, price, description, platformid, pub
 mysqli_query($dbc, $query) or die('Error querying the database!');
 
 ?>
-
 
     <div id="divspace" class="panel panel-default">
         <div class="panel-heading panel panel-success">Success....</div>

@@ -8,8 +8,6 @@ $siteDescription = "Please fill out the form below with information about the pu
 include('includes/header.php');
 
 ?>
-
-
     <i class="fa fa-plus fa-3x"></i>
     <form action="addingpublisher.php" method="post">
         <div class="form-group">
